@@ -11,5 +11,8 @@ return {
         },
       },
     },
+    keys = {
+      { "<leader>fs", LazyVim.pick("live_grep"), desc = "Grep (Root Dir)" },
+    },
   },
 }
