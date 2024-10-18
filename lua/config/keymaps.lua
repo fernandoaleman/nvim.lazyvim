@@ -4,3 +4,6 @@
 
 -- Oil
 vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
+
+-- Files
+vim.keymap.set("n", "<leader><leader>", "<C-^>", { desc = "Toggle between the last two files" })
