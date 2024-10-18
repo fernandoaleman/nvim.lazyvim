@@ -5,9 +5,20 @@ return {
   "neovim/nvim-lspconfig",
   opts = {
     servers = {
+      rubocop = {
+        capabilities = capabilities,
+        cmd = { os.getenv("HOME") .. "/.asdf/shims/rubocop" },
+        root_dir = util.root_pattern("Gemfile", ".git", vim.fn.getcwd()),
+        settings = {
+          rubocop = {
+            autocorrect = true,
+            useBundler = false,
+          },
+        },
+      },
       solargraph = {
         capabilities = capabilities,
-        cmd = { vim.fn.trim(vim.fn.system("asdf which solargraph")) },
+        cmd = { os.getenv("HOME") .. "/.asdf/shims/solargraph", "stdio" },
         filetypes = { "ruby" },
         root_dir = util.root_pattern("Gemfile", ".git", vim.fn.getcwd()),
         settings = {
