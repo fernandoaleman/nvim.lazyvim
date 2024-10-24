@@ -6,4 +6,5 @@
 vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
 
 -- Files
-vim.keymap.set("n", "<leader><leader>", "<C-^>", { desc = "Toggle between the last two files" })
+vim.api.nvim_del_keymap("n", "<leader><leader>")
+vim.api.nvim_set_keymap("n", "<leader><leader>", "<C-^>", { desc = "Toggle between the last two files" })
