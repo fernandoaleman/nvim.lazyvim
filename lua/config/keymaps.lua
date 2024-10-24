@@ -3,7 +3,7 @@
 -- Add any additional keymaps here
 
 -- Oil
-vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
+vim.api.nvim_set_keymap("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
 
 -- Files
 vim.api.nvim_del_keymap("n", "<leader><leader>")
