@@ -12,7 +12,9 @@ return {
       },
     },
     keys = {
-      { "<leader>fs", LazyVim.pick("live_grep"), desc = "Grep (Root Dir)" },
+      { "<leader><leader>", "<C-^>", desc = "Toggle between the last two files" },
+      { "<leader>ff", LazyVim.pick("find_files"), desc = "Find Files" },
+      { "<leader>fs", LazyVim.pick("live_grep"), desc = "Grep" },
     },
   },
 }
