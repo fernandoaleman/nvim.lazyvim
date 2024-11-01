@@ -4,7 +4,8 @@ return {
     opts = {},
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
-      require("oil").setup({
+      local oil = require("oil")
+      oil.setup({
         default_file_explorer = true,
         delete_to_trash = true,
         skip_confirm_for_simple_edits = true,
@@ -29,6 +30,7 @@ return {
           ["q"] = "actions.close",
         },
       })
+      vim.keymap.set("n", "-", oil.toggle_float, { desc = "Open parent directory" })
     end,
   },
 }
