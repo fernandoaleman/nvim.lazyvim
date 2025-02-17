@@ -8,3 +8,7 @@ vim.keymap.set("n", "<leader><space>", "<C-^>", { desc = "Toggle between the las
 -- visual
 vim.keymap.set("v", "<", "<gv", { desc = "Stay in right indentation mode" }) -- right indentation
 vim.keymap.set("v", ">", ">gv", { desc = "Stay in left indentation mode" }) -- left indentation
+
+vim.keymap.set("n", "<leader>dd", function()
+  require("snacks").terminal({ "lazydocker" }, { env = { PWD = vim.fn.getcwd() } })
+end, { desc = "Open LazyDocker" })
